@@ -1,7 +1,7 @@
 Nino's Editor
 <div align="center">
 <h2>Your lightweight, web-based text editor.</h2>
-<img src="assets/icons8-pencil-ios-17-outlined-96.png" alt="Nino's Editor" width="100" />
+<img src="assets/web/favicon/icons8-pencil-ios-17-outlined-96.png" alt="Nino's Editor" width="100" />
 </div>
 ---
 Features
