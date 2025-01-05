@@ -3,67 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nino's Editor - Documentation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    h1, h2, h3 {
-      color: #4CAF50;
-    }
-    ul {
-      padding-left: 1.5rem;
-      list-style-type: disc;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .button {
-      display: inline-block;
-      margin: 1rem 0;
-      padding: 0.5rem 1rem;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      text-align: center;
-    }
-    .button:hover {
-      background-color: #45a049;
-    }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
 </head>
 <body>
   <header>
