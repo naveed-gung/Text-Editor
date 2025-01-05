@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nino's Text Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="editor">
+    <div class="control-panel">
+      <select id="fontFamily">
+      </select>
+      <select id="fontSize">
+        <option value="10">10</option>
+        <option value="11" selected>11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+      </select>
+      <button id="increaseFontSize">A+</button>
+      <button id="decreaseFontSize">A-</button>
+      <button id="bold">B</button>
+      <button id="italic">I</button>
+      <button id="underline">U</button>
+      <input type="color" id="fontColor" />
+    </div>
+    <br >
+    <div class="textarea-wrapper">
+      <textarea id="editor" placeholder="Write here..."></textarea>
+     <div id="trashIcon" title="Clear text">&#128465;</div>
+    </div>       
+    <div id="counter">
+      <span id="wordCount">Words: 0</span> | <span id="charCount">Characters: 0</span>
+    </div>    
+    <p id="preview"></p>
+  </div>
+    <footer id="signature">
+      Made with <span id="coffee">☕</span> by <a>Naveed</a>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
