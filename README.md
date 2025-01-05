@@ -34,26 +34,51 @@ Live Demo
 </div>
 ---
 Technologies Used
-Frontend: HTML, CSS, JavaScript
-Hosting: Netlify
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 20px 0;">
+<div style="flex: 1; min-width: 200px; margin: 10px; padding: 20px; border: 1px solid #007bff; border-radius: 8px; background-color: #f9f9f9;">
+<h3>Frontend</h3>
+<p>HTML, CSS, JavaScript</p>
+</div>
+<div style="flex: 1; min-width: 200px; margin: 10px; padding: 20px; border: 1px solid #007bff; border-radius: 8px; background-color: #f9f9f9;">
+<h3>Hosting</h3>
+<p>Netlify</p>
+</div>
+</div>
 ---
 Future Plans
-🌈 Theme Options: Add light/dark mode for a personalized experience.
-☁️ Cloud Storage Support: Enable saving and loading files from the cloud.
-🔍 Syntax Highlighting: Implement syntax highlighting for code snippets.
-🤝 Collaboration Features: Allow multiple users to edit documents simultaneously.
+<div style="margin: 20px 0;">
+<ul>
+<li>🌈 <strong>Theme Options</strong>: Add light/dark mode for a personalized experience.</li>
+<li>☁️ <strong>Cloud Storage Support</strong>: Enable saving and loading files from the cloud.</li>
+<li>🔍 <strong>Syntax Highlighting</strong>: Implement syntax highlighting for code snippets.</li>
+<li>🤝 <strong>Collaboration Features</strong>: Allow multiple users to edit documents simultaneously.</li>
+</ul>
+</div>
 ---
 Contributing
-Contributions are welcome! Follow these steps to contribute:
-Fork the repository.
-Create a new branch:
-   git checkout -b feature-branch
-3. Make your changes and commit them: 
-   git commit -m "Add feature"
-4. Push to the branch:
-   git push origin feature-branch
-5. Open a pull request.
+<div style="margin: 20px 0;">
+<p>Contributions are welcome! Follow these steps to contribute:</p>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch:
+<pre><code>git checkout -b feature-branch</code></pre>
+</li>
+<li>Make your changes and commit them:
+<pre><code>git commit -m "Add feature"</code></pre>
+</li>
+<li>Push to the branch:
+<pre><code>git push origin feature-branch</code></pre>
+</li>
+<li>Open a pull request.</li>
+</ol>
+</div>
 ---
 Acknowledgments
-Icons8 for the icons used in the project.
-Markdown for providing a simple way to format text.
+<div style="margin: 20px 0;">
+<p>Special thanks to:</p>
+<ul>
+<li>Icons8 for the icons used in the project.</li>
+<li>Markdown for providing a simple way to format text.</li>
+</ul>
+</div>
+---
