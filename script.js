@@ -46,7 +46,7 @@ coffee.addEventListener('click', () => {
 
 function createCoffeeBean() {
   const bean = document.createElement('img');
-  bean.src = './bean.png';  
+  bean.src = './assets/images/bean.png';
   bean.classList.add('coffee-bean');
 
   bean.style.left = Math.random() * window.innerWidth + 'px';
@@ -151,4 +151,107 @@ document.addEventListener('keydown', (event) => {
 trashIcon.addEventListener('click', () => {
   editor.value = '';
   updatePreview(); 
+});
+
+setInterval(() => {
+  localStorage.setItem('editorContent', editor.value);
+}, 5000); // Autosave every 5 seconds
+
+// Load saved content on page load
+window.onload = () => {
+  const savedContent = localStorage.getItem('editorContent');
+  if (savedContent) {
+    editor.value = savedContent;
+    updatePreview();
+  }
+  const loadingScreen = document.getElementById('loadingScreen');
+  
+  // Set a timeout to hide the loading screen after 3 seconds
+  setTimeout(() => {
+    loadingScreen.style.display = 'none'; // Hide the loading screen
+  }, 3000); // 3000 milliseconds = 3 seconds
+};
+
+document.getElementById('exportTxt').addEventListener('click', () => {
+  const blob = new Blob([editor.value], { type: 'text/plain' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'document.txt';
+  link.click();
+});
+
+// Import jsPDF from the global scope
+const { jsPDF } = window.jspdf;
+
+document.getElementById('exportPdf').addEventListener('click', () => {
+  const pdf = new jsPDF();
+  
+  // Get font size and color
+  const fontSize = parseInt(window.getComputedStyle(preview).fontSize);
+  const fontColor = preview.style.color || '#000000'; // Default to black if no color is set
+
+  // Set default font size and color
+  pdf.setFontSize(fontSize);
+  pdf.setTextColor(fontColor);
+  pdf.setFont("helvetica"); // Change to a supported font if needed
+
+  // Split the editor content into lines
+  const textLines = editor.value.split('\n');
+  let y = 10; // Starting Y position
+
+  textLines.forEach((line) => {
+    // Check for styles in the line
+    let currentFont = "normal";
+    if (bold.classList.contains('active')) {
+      currentFont = "bold";
+    }
+    if (italic.classList.contains('active')) {
+      currentFont = "italic";
+    }
+
+    // Set the font style
+    pdf.setFont(currentFont);
+
+    // Add the text to the PDF
+    pdf.text(line, 10, y);
+    y += fontSize + 2; // Move down for the next line
+  });
+
+  pdf.save('document.pdf');
+});
+
+document.getElementById('exportDoc').addEventListener('click', () => {
+  const fontSize = parseInt(window.getComputedStyle(preview).fontSize);
+  const fontColor = preview.style.color || '#000000'; // Default to black if no color is set
+
+  // Create a simple HTML structure for the Word document
+  const htmlContent = `
+    <html>
+      <head>
+        <style>
+          body {
+            font-size: ${fontSize}px;
+            color: ${fontColor};
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ensure the font family is set */
+          }
+          .bold { font-weight: bold; }
+          .italic { font-style: italic; }
+          .underline { text-decoration: underline; }
+        </style>
+      </head>
+      <body>
+        ${editor.value.replace(/\n/g, '<br>').replace(/<b>(.*?)<\/b>/g, '<span class="bold">$1</span>')
+                      .replace(/<i>(.*?)<\/i>/g, '<span class="italic">$1</span>')
+                      .replace(/<u>(.*?)<\/u>/g, '<span class="underline">$1</span>')}
+      </body>
+    </html>
+  `;
+
+  const blob = new Blob(['\ufeff', htmlContent], {
+    type: 'application/msword'
+  });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'document.doc';
+  link.click();
 });
