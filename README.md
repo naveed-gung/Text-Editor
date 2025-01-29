@@ -41,7 +41,7 @@
 </div>
 
 <div align="center">
-  <a href="https://your-live-demo-link.com" target="_blank" style="padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">Try out the live version of Nino's Editor</a>
+  <a href="https://https://ninos-editor.netlify.app/" target="_blank" style="padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none;">Try out the live version of Nino's Editor</a>
 </div>
 
 ---
