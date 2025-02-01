@@ -2,6 +2,9 @@
 
 <div align="center">
   <h2>Your lightweight, web-based text editor.</h2>
+  <p>
+    Nino's Editor is a lightweight, web-based text editor designed for simplicity and efficiency. Whether you're drafting notes, writing markdown, or creating documents, Nino's Editor provides a distraction-free environment with essential features to enhance your workflow.
+  </p>
   <img src="assets/favicon/web/icons8-pencil-ios-17-outlined-96.png" alt="Nino's Editor" width="100" />
 </div>
 
