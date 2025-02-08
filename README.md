@@ -36,8 +36,7 @@
     <p>Save your work as `.txt`, `.pdf`, or `.doc` files for easy sharing.</p>
   </div>
 </div>
-<h2>Screen Shot</h2>
-![Editor Preview](assets/ss.png)
+
 
 ---
 
