@@ -37,7 +37,7 @@
   </div>
 </div>
 <h2>Screen Shot</h2>
-![Editor preview](assets/ss.png)
+![Editor Preview](assets/ss.png)
 
 ---
 
